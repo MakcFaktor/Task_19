@@ -1,0 +1,35 @@
+.weather-widget {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-widget h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.weather-widget p {
+  margin: 10px 0;
+}
+
+.weather-widget .temp {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.weather-widget .refresh-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
