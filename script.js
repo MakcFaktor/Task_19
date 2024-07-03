@@ -1,9 +1,6 @@
-const apiKey = 'f19787ae1432068d8c47f0fdb264c519';
-const city = 'Odessa';
-
 async function fetchWeather() {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Odessa&appid=f19787ae1432068d8c47f0fdb264c519&units=metric`);
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
@@ -17,6 +14,7 @@ async function fetchWeather() {
 
 function updateWeatherWidget(data) {
     const weatherWidget = document.getElementById('weather-widget');
+    weatherWidget.querySelector('h2').textContent = `Погода у місті ${data.name}`;
     weatherWidget.querySelector('.description').textContent = data.weather[0].description;
     weatherWidget.querySelector('.temp').textContent = `${data.main.temp}°C`;
     weatherWidget.querySelector('.humidity').textContent = `Вологість: ${data.main.humidity}%`;
